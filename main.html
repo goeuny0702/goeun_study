@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./images/그림1.png" />
+    <link rel="icon" href="./images/그림1.png" />
+    <script src="./js/jquery-3.7.1.js"></script>
+    <!-- lodash -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- gsap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- swiper 6.8.4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js" integrity="sha512-BABFxitBmYt44N6n1NIJkGOsNaVaCs/GpaJwDktrfkWIBFnMD6p5l9m+Kc/4SLJSJ4mYf+cstX98NYrsG/M9ag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css" integrity="sha512-aMup4I6BUl0dG4IBb0/f32270a5XP7H1xplAJ80uVKP6ejYCgZWcBudljdsointfHxn5o302Jbnq1FXsBaMuoQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="./js/main.js"></script>
+<body>
+    <!-- header를 로드할 부분 -->
+    <div id="header"></div>
+
+    <script>
+        // footer.html 파일을 가져와서 #footer div에 삽입
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+
+    <div class="swiper-container">
+        <!-- 라디오버튼 -->
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="img1">
+                <img src="./images/main6.jpg" alt="img1">
+                <div class="text">
+                    <p>" 고객만족 " 을 우선으로 하는</p>
+                    <h1>(주) 신우시스템</h1>
+                </div>
+            </div>
+            <div class="swiper-slide" id="img2">
+                <img src="./images/main7.jpg" alt="img2">
+                <div class="text">
+                    <p>" 끊임없는 혁신과 기술 개발 "</p>
+                    <h1>신뢰할 수 있는 파트너</h1>
+                </div>
+            </div>
+            <div class="swiper-slide" id="img3">
+                <img src="./images/main8.jpg" alt="img3">
+                <div class="text">
+                    <p>" 고객의 요구에 맞는 맞춤형 솔루션 제공 "</p>
+                    <h1>최상의 품질 보장</h1>
+                </div>
+            </div>
+            <div class="swiper-slide" id="img4">
+                <img src="./images/main4.jpg" alt="img4">
+                <div class="text">
+                    <p>" 최첨단 설비를 갖춘 제조공정 "</p>
+                    <h1>신뢰의 가치</h1>
+                </div>
+            </div>
+            <div class="swiper-slide" id="img5">
+                <img src="./images/main5.jpg" alt="img5">
+                <div class="text">
+                    <p>" 세계로 뻗어가는 글로벌 리더 "</p>
+                    <h1>미래를 함께 하겠습니다</h1>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Footer를 로드할 부분 -->
+    <div id="footer"></div>
+
+    <script>
+        // footer.html 파일을 가져와서 #footer div에 삽입
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+    
+</body>
+</html>

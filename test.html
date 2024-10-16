@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설비현황</title>
+    <link rel="stylesheet" href="/css/test.css">
+    <script defer src="./js/test.js"></script>
+</head>
+<body>
+    <!-- header를 로드할 부분 -->
+    <div id="header"></div>
+
+    <script>
+        // footer.html 파일을 가져와서 #footer div에 삽입
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <div class="homepage5">
+        <img class="part1" src="./images/image9.png">
+        <div class="text">
+            <p class="text-a">FACILITY STATUS</p>
+            <p class="text-b">설비현황</p>
+        </div>
+        
+        <div class="navbar">
+            <div class="menu-category">
+                <div class="home-icon">
+                    <a href="#" class="homeimage"><img src="./images/home-icon.png" alt="homeimage"></a>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-item">생산공정</a>
+                    <div class="dropdown-content">
+                        <a href="./part1.html">신우시스템</a>
+                        <a href="/machine.html">사업분야</a>
+                        <a href="/part5.html">생산공정</a>
+                        <a href="#">고객센터</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-item">설비현황</a>
+                    <div class="dropdown-content">
+                        <a href="./part5.html">설비현황</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="part2">
+            <h1>기계설비</h1>
+            <div class="machine1 scroll-section">
+                <img src="/images/facilities1.png" alt="machine1">
+                <div class="machine1-table">
+                    <h2>CNC Bridge Type Machining Center</h2>
+                    <table class="machine1-text">
+                        <tr>
+                            <th>Work Capacity</th>
+                            <td>3,000× 2,100× 1,000</td>
+                        </tr>
+                        <hr>
+                        <tr>
+                            <th>Q’ty</th>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>Maker</th>
+                            <td>AWEA</td>
+                        </tr>
+                    </table>    
+                </div>
+            </div>
+            <div class="machine2 scroll-section">
+                <img src="/images/facilities2.png" alt="machine2">
+                <div class="machine1-table">
+                    <h2>CNC Bridge Type Machining Center</h2>
+                    <table class="machine1-text">
+                        <tr>
+                            <th>Work Capacity</th>
+                            <td>5,000× 1,200× 1,000</td>
+                        </tr>
+                        <hr>
+                        <tr>
+                            <th>Q’ty</th>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>Maker</th>
+                            <td>AWEA</td>
+                        </tr>
+                    </table>    
+                </div>
+            </div>
+            <!-- 추가된 machine3, machine4에도 동일한 클래스를 적용 -->
+        </div>
+        
+
+
+
+        <!-- Footer를 로드할 부분 -->
+        <div id="footer"></div>
+
+        <script>
+            // footer.html 파일을 가져와서 #footer div에 삽입
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+</body>
+</html>

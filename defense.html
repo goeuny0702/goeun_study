@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>㈜신우시스템</title>
+    <link href="./css/precision.css" rel="stylesheet">
+    <script defer src="./js/main2.js"></script>
+    <link rel="shortcut icon" href="./images/그림1.png" />
+    <link rel="icon" href="./images/그림1.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <!-- header를 로드할 부분 -->
+    <div id="header"></div>
+
+    <script>
+        // footer.html 파일을 가져와서 #footer div에 삽입
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+
+
+    <div class="container">
+        <div class="image-group">
+            <div class="image-container">
+                <img src="./images/정밀부품가공.jpg" alt="신우시스템">
+                <div class="text-overlay">
+                    <p class="text-a">PRECISION PARTS MACHINING</p>
+                    <p class="text-b">정밀부품가공</p>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------->
+        <div class="menu-box">
+            <div class="inner">
+                <a href="./main.html">
+                    <span class="material-symbols-outlined">home</span>
+                </a>
+
+                <ul class="main">
+                    <li>
+                        <a href="./precision.html">
+                            제품소개
+                        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="./part1.html">신우시스템</a></li>
+                            <li><a href="./machine.html">사업분야</a></li>
+                            <li><a href="./part5.html">생산공정</a></li>
+                            <li><a href="./precision.html">제품소개</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./precision.html">
+                            정밀부품가공
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="./precision.html">정밀부품가공</a></li>
+                            <li><a href="#">디자인 및 설계</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- --------------------------------------------------- -->
+        <div class="content">
+            <div class="scroll-section">
+                <div class="text-section">
+                    <h4>정밀부품</h4>
+                    <div class="btn-group">
+                        <a href="./precision.html" class="btn btn--black">반도체LCD부품</a>
+                        <a href="./aerospace.html" class="btn btn--black">항공산업부품</a>
+                        <a href="./defense.html" class="btn btn--black active">방위산업제품</a>
+                    </div>
+                </div>
+
+                <div class="img-section">
+                    <div class="imgaes">
+                        <img src="./images/overview27.png" alt="국위산업부품1">
+                        <img src="./images/overview28.png" alt="국위산업부품2">
+                        <img src="./images/overview29.png" alt="국위산업부품3">
+                        <img src="./images/overview30.png" alt="국위산업부품4">
+                        <img src="./images/overview31.png" alt="국위산업부품5">
+                        <img src="./images/overview32.png" alt="국위산업부품6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer를 로드할 부분 -->
+    <div id="footer"></div>
+
+    <script>
+        // footer.html 파일을 가져와서 #footer div에 삽입
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
